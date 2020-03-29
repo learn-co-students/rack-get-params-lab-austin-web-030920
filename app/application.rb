@@ -35,22 +35,22 @@ class Application
     resp.finish
   end
 
-  def view_cart
-    if @@cart.empty?
-      resp.write "Your cart is empty"
-    else
-      @@cart.each {|item| resp.write "#{item}\n"}
-    end
-  end
+  # def view_cart
+  #   if @@cart.empty?
+  #     resp.write "Your cart is empty"
+  #   else
+  #     @@cart.each {|item| resp.write "#{item}\n"}
+  #   end
+  # end
 
-  def add_to_cart
-    if @@items.include?(add_item)
-      @@cart << add_item
-      return "#added {add_item}"
-    else
-      return "Couldn't find #{add_item}"
-    end
-  end
+  # def add_to_cart
+  #   if @@items.include?(add_item)
+  #     @@cart << add_item
+  #     return "#added {add_item}"
+  #   else
+  #     return "Couldn't find #{add_item}"
+  #   end
+  # end
 
   def handle_search(search_term)
     if @@items.include?(search_term)
